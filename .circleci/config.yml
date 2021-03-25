@@ -1,0 +1,17 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@0.1.2 
+
+jobs: {} snippet: docker 
+  build:
+    docker:
+      - image: circleci/ruby:2.6.3-stretch-node
+    executor: ruby/default
+    steps:commands:
+      
+      - checkout
+      - run:executors:
+        
+          name: Which bundler?
+          command: bundle -v
+      - ruby/bundle-install
